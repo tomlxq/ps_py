@@ -18,6 +18,3 @@ def main():
 						 stdout=subprocess.PIPE,
 						 )
 		time.sleep(1.0)
-	pythoncom.CoUninitialize ()
-if __name__ == "__main__":
-	main()	
