@@ -3,24 +3,6 @@ from collections import deque
 
 
 class DpExample:
-    def climbStairs(self, n: int) -> int:
-        if n <= 1:
-            return n
-        dp = [0 for _ in range(n)]
-        dp[0], dp[1] = 1, 2
-        for i in range(2, n):
-            dp[i] = dp[i - 1] + dp[i - 2]
-        return dp[n - 1]
-
-    def climbStairs2(self, n: int) -> int:
-        if n <= 1:
-            return n
-        prev, curr = 1, 2
-        for i in range(2, n):
-            total = prev + curr
-            prev, curr = curr, total
-        return curr
-
     def numSquares(self, n: int) -> int:
         dp = [0 for _ in range(n + 1)]
         for i in range(1, n + 1):
